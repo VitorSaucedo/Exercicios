@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulário de Registro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Formulário de Registro</h1>
+    <p>Por favor preencha este formulário com as informações pedidas</p>
+
+    <form>
+      <fieldset>
+        <label>Primeiro Nome: <input type="text" name="primeiro-nome" required /></label>
+        <label>Último Nome: <input type="text" name="ultimo-nome" required /></label>
+        <label>Email: <input type="email" name="email" required /></label>
+        <label
+          >Crie uma nova senha: <input type="password" name="senha" pattern="[a-z0-5]{8,}" required
+        /></label>
+      </fieldset>
+
+      <fieldset>
+        <label><input type="radio" name="tipo-de-conta" class="inline" /> Conta Pessoal</label>
+
+        <label><input type="radio" name="tipo-de-conta" class="inline" /> Conta Empresarial</label>
+
+        <label>
+          <input type="checkbox" name="termos-de-serviço" class="inline" required />
+          Eu aceito os
+          <a href="https://www.freecodecamp.org/news/terms-of-service/">termos e condições</a>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <label>Envie uma foto de perfil: <input type="file" name="arquivo" /></label>
+
+        <label
+          >Idade (anos):
+          <input type="number" name="idade" min="13" max="120" />
+        </label>
+
+        <label
+          >Onde você ouviu de nós?
+          <select name="referrer">
+            <option value="">(escolha uma)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Outro</option>
+          </select>
+        </label>
+
+        <label
+          >Escreva sobre você:
+          <textarea name="bio" rows="3" cols="30" placeholder="Eu gosto de programar na praia..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>
